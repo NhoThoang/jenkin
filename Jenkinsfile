@@ -3,7 +3,8 @@ pipeline{
     stages{
         stage("Clone stage"){
             steps {
-                git credentialsId: 'webhook2', url: "https://gitlab.com/thoang1/jenkins.git"
+                git branch: "master", credentialsId: 'webhook2', url: "https://gitlab.com/thoang1/jenkins.git"
+                
             }
         }
 
@@ -13,7 +14,7 @@ pipeline{
         //             sh 'docker build -t thobaby/node:v2 .'
         //             sh 'docker push thobaby/node:v2'
  
-        //         }                  
+        //        }                  
    
         //     }
 
