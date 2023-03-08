@@ -7,15 +7,15 @@ pipeline{
             }
         }
 
-
-        stage("clones stage"){
-            step{
-                withDockerRegistry(credentialsId: 'dockerhub', url: 'https://index.docker.io/v1/') {
+        stage('buid stage'){
+            steps {
+                withDockerRegistry(credentialsId: 'dockerhub', url: 'https://index.docker.io/v1/'){
                     sh 'docker build -t thobaby/node:v2 .'
                     sh 'docker push thobaby/node:v2'
-                }
+ 
+                }                  
+   
             }
-
 
         }
     }
