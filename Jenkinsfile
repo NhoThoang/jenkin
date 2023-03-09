@@ -1,6 +1,6 @@
 pipeline{
     agent any
-    // stages{
+    stages{
     //     stage("Clone stage"){
     //         steps {
     //             git branch: "master", credentialsId: 'jenkins', url: "https://gitlab.com/thoang1/jenkins.git"
