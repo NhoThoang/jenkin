@@ -3,7 +3,7 @@ pipeline{
     stages{
         stage("Clone stage"){
             steps {
-                git branch: "master", credentialsId: 'jenkins', url: "https://gitlab.com/thoang1/jenkins.git"
+                git branch: "master", credentialsId: 'jenkins', url: "https://github.com/NhoThoang/jenkin.git"
                 
             }
         }
